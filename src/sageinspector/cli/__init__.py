@@ -11,31 +11,8 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+__all__ = ["main", "logs", "open", "describe"]
 
-__all__ = [
-    "__version__",
-    "env",
-    "Arn",
-    "Resource",
-    "Endpoint",
-    "NotebookInstance",
-    "TrainingJob",
-    "ProcessingJob",
-    "TransformJob",
-    "HyperParameterTuningJob",
-]
+from ._base import main
 
-from ._version import __version__
-
-from ._env import env
-
-from .lib import (
-    Arn,
-    Resource,
-    Endpoint,
-    NotebookInstance,
-    TrainingJob,
-    ProcessingJob,
-    TransformJob,
-    HyperParameterTuningJob,
-)
+from . import logs, open, describe

@@ -11,31 +11,27 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+import boto3
 
-__all__ = [
-    "__version__",
-    "env",
-    "Arn",
-    "Resource",
-    "Endpoint",
-    "NotebookInstance",
-    "TrainingJob",
-    "ProcessingJob",
-    "TransformJob",
-    "HyperParameterTuningJob",
-]
+# TODO: we could use it from gluon-ts, but this would add a major dependency
+from .util.settings import Settings, Dependency
+from .util.aws_config import Config
 
-from ._version import __version__
 
-from ._env import env
+def sagemaker_client(boto_session):
+    return boto_session.client("sagemaker")
 
-from .lib import (
-    Arn,
-    Resource,
-    Endpoint,
-    NotebookInstance,
-    TrainingJob,
-    ProcessingJob,
-    TransformJob,
-    HyperParameterTuningJob,
-)
+
+def logs_client(boto_session):
+    return boto_session.client("logs")
+
+
+class Env(Settings):
+    boto_session: boto3.Session
+    sagemaker: Dependency = sagemaker_client
+    cw_logs: Dependency = logs_client
+
+    aws_config: Config = Config.read()
+
+
+env = Env()

@@ -6,5 +6,7 @@ setup(
     install_requires=[
         "boto3",
         "click >= 8.0",
+        "pydantic",
+        "toolz",
     ],
 )

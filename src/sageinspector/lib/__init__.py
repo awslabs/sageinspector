@@ -11,10 +11,7 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-
 __all__ = [
-    "__version__",
-    "env",
     "Arn",
     "Resource",
     "Endpoint",
@@ -25,12 +22,9 @@ __all__ = [
     "HyperParameterTuningJob",
 ]
 
-from ._version import __version__
+from .arn import Arn
 
-from ._env import env
-
-from .lib import (
-    Arn,
+from .resource import (
     Resource,
     Endpoint,
     NotebookInstance,

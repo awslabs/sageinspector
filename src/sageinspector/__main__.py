@@ -11,31 +11,7 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+from .cli import main
 
-__all__ = [
-    "__version__",
-    "env",
-    "Arn",
-    "Resource",
-    "Endpoint",
-    "NotebookInstance",
-    "TrainingJob",
-    "ProcessingJob",
-    "TransformJob",
-    "HyperParameterTuningJob",
-]
-
-from ._version import __version__
-
-from ._env import env
-
-from .lib import (
-    Arn,
-    Resource,
-    Endpoint,
-    NotebookInstance,
-    TrainingJob,
-    ProcessingJob,
-    TransformJob,
-    HyperParameterTuningJob,
-)
+if __name__ == "__main__":
+    main()
