@@ -1,6 +1,6 @@
 # Sage-Inspector
 
-A tool to ispect SageMaker resources more easily.
+A tool to inspect SageMaker resources more easily.
 
 ### CLI
 
