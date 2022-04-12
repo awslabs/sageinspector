@@ -1,5 +1,9 @@
 # Sage-Inspector
 
+
+[![PyPI](https://img.shields.io/pypi/v/sageinspector.svg?style=flat-square)](https://pypi.org/project/sageinspector/)
+[![GitHub](https://img.shields.io/github/license/awslabs/sageinspector.svg?style=flat-square)](./LICENSE)
+
 A tool to inspect SageMaker resources more easily.
 
 ### CLI
