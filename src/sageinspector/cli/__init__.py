@@ -11,8 +11,8 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-__all__ = ["main", "logs", "open", "describe"]
+__all__ = ["main", "logs", "open", "describe", "scaffold"]
 
 from ._base import main
 
-from . import logs, open, describe
+from . import logs, open, describe, scaffold
